@@ -10,6 +10,8 @@ It is based on the paper [**Ranking a Random Feature for Variable and Feature Se
 ### Prerequisites:
 Python 2.7 *and Python 3*
 
+Pandas
+
 NumPy
 
 SciPy
@@ -25,23 +27,7 @@ For Windows users, you can also install the repository by the following command:
 
     setup.py install
 
-## Project website
-Instructions of using this repository can be found in our project webpage at http://featureselection.asu.edu/
 
-## Citation
-
-If you find scikit-feature feature selection reposoitory useful in your research, please consider citing the following paper::
-
-    @article{li2016feature,
-       title={Feature Selection: A Data Perspective},
-       author={Li, Jundong and Cheng, Kewei and Wang, Suhang and Morstatter, Fred and Trevino, Robert P and Tang, Jiliang and Liu, Huan},
-       journal={arXiv preprint arXiv:1601.07996},
-       year={2016}
-    }
-    
 ## Contact
-Jundong Li
-E-mail: jundong.li@asu.edu
-
-Kewei Cheng
-E-mail: kcheng18@asu.edu
+Ameya Dahale
+E-mail: 100ameya@gmail.com
