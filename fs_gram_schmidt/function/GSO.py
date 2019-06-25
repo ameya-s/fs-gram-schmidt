@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import scipy as sp
-from helper import *
+from .helper import *
 
 
 def rank_features(feature_df, target, risk=1):
