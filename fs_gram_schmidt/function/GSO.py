@@ -31,7 +31,7 @@ def rank_features(feature_df, target, risk=1):
 
     cos_sqr_xy = cosine_sqr(X_tr, y)
 
-    feature_with_least_angle = np.where(cos_sqr_xy == np.max(cos_sqr_xy))
+    feature_with_least_angle = np.where(cos_sqr_xy == np.max(cos_sqr_xy))[0]
     selected_features = np.append(selected_features, feature_with_least_angle)
     ranked_features.append(features[feature_with_least_angle])
     refined_features = np.delete(features, selected_features)
