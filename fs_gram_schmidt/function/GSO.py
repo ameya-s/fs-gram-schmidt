@@ -1,8 +1,9 @@
 import numpy as np
 import pandas as pd
 import scipy as sp
-from .helper import *
-
+import scipy.linalg as la
+from helper import *
+import os
 
 def rank_features(feature_df, target, risk=1):
     X = np.array(feature_df)
@@ -31,7 +32,7 @@ def rank_features(feature_df, target, risk=1):
 
     cos_sqr_xy = cosine_sqr(X_tr, y)
 
-    feature_with_least_angle = np.where(cos_sqr_xy == np.max(cos_sqr_xy))[0]
+    feature_with_least_angle = np.where(cos_sqr_xy == np.max(cos_sqr_xy))[0][0]
     selected_features = np.append(selected_features, feature_with_least_angle)
     ranked_features.append(features[feature_with_least_angle])
     refined_features = np.delete(features, selected_features)
@@ -51,7 +52,7 @@ def rank_features(feature_df, target, risk=1):
             -1, n_instances)  # Matrix of remaining feature vectors
 
         # Finding null space of selected features
-        x_least_null_space = sp.linalg.null_space(x_least,
+        x_least_null_space = la.null_space(x_least,
                                                   n_features - (i + 1))
 
         # Projecting remaining features onto nullspace of selected features
