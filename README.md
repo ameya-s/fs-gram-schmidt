@@ -28,6 +28,21 @@ For Windows users, you can also install the repository by the following command:
     setup.py install
 
 
+## Examples
+
+```
+from fs-gram-schmidt.function import GSO
+
+# feature_df : n*m pandas dataframe (preprocessed : should be scaled and works best when outliers are removed)
+# target : n*1 pandas series of target values corresponding to feature_df
+# risk : Predefined threshold of risk (0 < risk < 1)
+
+ranked_features, feature_selection_risk = GSO.rank_features(train_X, target, risk=0.05)
+
+# ranked_features : List of ranked features ordered by their relevancy(descending) and selection risk (ascending)
+# feature_selection_risk : Mapping of nth feature in ranked_features with it's selection risk 
+```
+
 ## Contact
 Ameya Dahale
 
