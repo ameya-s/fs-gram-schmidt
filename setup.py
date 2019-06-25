@@ -23,5 +23,5 @@ setup(
     author = AUTHOR,
     author_email = AUTHOR_EMAIL,
     url = URL,
-    packages =['fs_gram_schmidt']
+    packages =['fs_gram_schmidt', 'fs_gram_schmidt.function']
 )
